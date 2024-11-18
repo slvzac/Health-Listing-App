@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    tools:context=".QuizQuestionActivity"
+    android:fillViewport="true">
+
+    <!-- Reset Button -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <!-- The Progression Bar -->
+            <ProgressBar
+                android:id="@+id/tv_progress_bar"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:max="20"
+                android:minHeight="20dp"
+                android:progress="2"
+                android:progressDrawable="@drawable/custom_progress_bar" />
+
+            <!-- The Progress Count -->
+            <TextView
+                android:id="@+id/tv_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="1/15"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!-- Question Title -->
+        <TextView
+            android:id="@+id/tv_question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:text="What country does this flag belong to?"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:autoSizeMaxTextSize="22sp"
+            app:autoSizeMinTextSize="16sp"
+            app:autoSizeTextType="uniform" />
+
+        <!-- Image Display -->
+        <ImageView
+            android:id="@+id/iv_question"
+            android:layout_width="wrap_content"
+            android:layout_height="140dp"
+            android:layout_margin="4dp"
+            android:contentDescription="Question Image"
+            tools:src="@drawable/ques_japan" />
+
+        <!-- Option 1-->
+        <TextView
+            android:id="@+id/tv_option_one"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/option_default_bg"
+            android:gravity="center"
+            android:padding="15dp"
+            android:textColor="@color/FadedBlack"
+            android:textSize="18sp"
+            tools:text="Answer A" />
+
+        <!-- Option 2-->
+        <TextView
+            android:id="@+id/tv_option_two"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/option_default_bg"
+            android:gravity="center"
+            android:padding="15dp"
+            android:textColor="@color/FadedBlack"
+            android:textSize="18sp"
+            tools:text="Answer B" />
+
+        <!-- Option 3-->
+        <TextView
+            android:id="@+id/tv_option_three"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/option_default_bg"
+            android:gravity="center"
+            android:padding="15dp"
+            android:textColor="@color/FadedBlack"
+            android:textSize="18sp"
+            tools:text="Answer C" />
+
+        <!-- Option 4-->
+        <TextView
+            android:id="@+id/tv_option_four"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/option_default_bg"
+            android:gravity="center"
+            android:padding="15dp"
+            android:textColor="@color/FadedBlack"
+            android:textSize="18sp"
+            tools:text="Answer D" />
+
+        <!-- Submit Button -->
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/design_default_color_primary"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="NEXT QUESTION"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- Back Button -->
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/design_default_color_primary"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="RETURN"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+
+    <!-- Reset Button -->
+    <Button
+        android:id="@+id/btn_reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset"
+        android:padding="8dp"
+        android:layout_alignParentStart="true" />
+
+    <!-- Username TextView -->
+    <TextView
+        android:id="@+id/tv_quesname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Username"
+        android:textColor="@color/FadedBlack"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        app:autoSizeTextType="uniform"
+        app:autoSizeMinTextSize="14sp"
+        app:autoSizeMaxTextSize="22sp" />
+
+    <!-- Cheat Button -->
+    <Button
+        android:id="@+id/btn_cheat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ANSWER"
+        android:padding="8dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_toEndOf="@id/btn_reset"
+        android:layout_toStartOf="@id/btn_cheat"
+        android:layout_below="@id/tv_quesname"
+        android:layout_centerInParent="true" />
+
+</RelativeLayout>
